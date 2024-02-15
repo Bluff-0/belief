@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import SpotifyLogin from "./login/SpotifyLogin";
+import { useEffect } from "react";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 
-function App() {
+import Home from "./components/Home";
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+  typography: { 
+    fontFamily: ["Montserrat", "sans-serif"].join(",") 
+  }
+});
+
+const App = () => {
+  const [token, setToken] = useState(null);
+  useEffect(() => setToken(sessionStorage.getItem('spotify_token')), [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    (token == null) ? (<SpotifyLogin setToken={setToken} />) :
+      (
+        <ThemeProvider theme={darkTheme}>
+          <CssBaseline />
+          <Home />
+        </ThemeProvider>
+      )
   );
-}
+};
 
 export default App;
