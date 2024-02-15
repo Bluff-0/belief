@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d6181205.css",
+    "main.js": "/static/js/main.fee91e6b.js",
+    "static/js/592.baaba27e.chunk.js": "/static/js/592.baaba27e.chunk.js",
+    "static/media/belief-logo.png": "/static/media/belief-logo.ce1e7e8a9a145e0d8cad.png",
+    "static/media/spotify-logo.svg": "/static/media/spotify-logo.c45e1d50745177768ef10563495af926.svg",
+    "index.html": "/index.html",
+    "main.d6181205.css.map": "/static/css/main.d6181205.css.map",
+    "main.fee91e6b.js.map": "/static/js/main.fee91e6b.js.map",
+    "592.baaba27e.chunk.js.map": "/static/js/592.baaba27e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6181205.css",
+    "static/js/main.fee91e6b.js"
+  ]
+}
